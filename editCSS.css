@@ -1,0 +1,97 @@
+p {
+  color: #848484;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  line-height: 28px;
+}
+/*---Global CSS Styles---*/
+.container{width:1000px; margin:0 auto;font-family: 'Open Sans', sans-serif;}
+.container-fluid{width:100%; float:left;}
+.purpleDrkBg{background:#c39797;}
+.row{width:100%; float:left;}
+.ltlPinkBg{background:#ffc2b2;}
+.ltlGreyBg{background:#f0f0f0;}
+/*---Header Area---*/
+header{height:105px; display:block;}
+header .logoCon{float:left; width:18%; position:relative;}
+header .logoCon a.logo{display:block; width:168px; height:46px; background:url("C:\Bhavana\Profesional\Sem3\WT\MiniProject\Capture.jpg") no-repeat;}
+header .logoConAf .socialmedia{position:relative; float:right; width:auto; padding:22px 0 0 0;}
+header .logoConAf .socialmedia .divider{width:1px; background:#ccc; display:block; float:left; height:25px; margin:0 30px -7px 30px;}
+header .logoConAf .socialmedia .social{display:block; float:left;}
+header .logoConAf .socialmedia .social ul{list-style:none; margin:0; padding:0; display:inline;}
+header .logoConAf .socialmedia .social ul li{list-style:none; display:inline-block;}
+header .logoConAf .socialmedia .social ul li a.facebook{background:url("C:\\Bhavana\\Profesional\\Sem3\\WT\\MiniProject\\MyProject\\fb1.png") no-repeat; display:inline-block; height:25px; width:25px;}
+header .logoConAf .socialmedia .social ul li a.twitter{background:url("C:\\Bhavana\\Profesional\\Sem3\\WT\\MiniProject\\MyProject\\twi1.png") no-repeat; display:inline-block; height:25px; width:25px;}
+header .logoConAf .socialmedia .social ul li a.instagram{background:url("C:\\Bhavana\\Profesional\\Sem3\\WT\\MiniProject\\MyProject\\inst.jpg") no-repeat; display:inline-block; height:25px; width:25px;}
+/********* menu *********/
+header .logoConAf .navigation{font-family: 'Open Sans', sans-serif; font-size:17px; padding:10px 0 0 0;}
+header .logoConAf .navigation ul{margin:0; padding:0; list-style:none; text-align:right;}
+header .logoConAf .navigation ul li{list-style:none; display:inline-block; margin:0 16px;}
+header .logoConAf .navigation ul li a{color:#737373; text-decoration:none; font-size:17px;}
+header .logoConAf .navigation ul li a:hover{color:#e34b22;}
+/*------------------Footer---------------------*/
+.footer{position:relative; clear:both; padding:30px 0 20px 0;}
+.footer ul{list-style:none; margin:0; padding:0;}
+.footer ul li a{color:#666; text-decoration:none; font-size:12px;}
+.footer ul li a:hover{color:#000;}
+.copyright{font-family: 'Open Sans', sans-serif; font-size:12px; color:#666; text-align:right;}
+.w_50{width:50%;}
+.right{display:inline-block;text-align:right;}
+/***3 WAYS***************************/
+.whatIsMyles ul li{list-style:none; display:inline-block; width:30%;}
+.whatIsMyles ul li .wim1{background:url(bg.jpg) no-repeat; background-size:cover; width:200px; height:102px; font-size:14px; font-family: 'Open Sans', sans-serif; text-align:center; color:#000; padding:95px 0 0 0; line-height:normal;}
+.whatIsMyles ul li .wim1 span{font-size:40px; font-family:'HelveticaLTStd-Bold'; display:block;}
+.whatIsMyles ul li .wim2{background:url(cityBg.png) no-repeat; background-size:cover; width:200px; height:102px; font-size:14px; font-family: 'Open Sans', sans-serif; text-align:center; color:#000; padding:96px 0 0 0; line-height:normal;}
+.whatIsMyles ul li .wim2 span{font-size:40px; font-family:'HelveticaLTStd-Bold'; display:block;}
+.whatIsMyles ul li .wim3{background:url(loc1.png) no-repeat; background-size:cover; width:200px; height:102px; font-size:14px; font-family: 'Open Sans', sans-serif; text-align:center; color:#000; padding:96px 0 0 0; line-height:normal;}
+.whatIsMyles ul li .wim3 span{font-size:40px; font-family: 'Open Sans', sans-serif; display:block;}
+/**Clearfix: contain floats***/
+.clearfix:before,
+.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.f_l{
+float:left;
+}
+.f_r{
+float:right;
+}
+/******* what is myles page *******/
+.mt50{margin-top:50px;}
+.whatis {clear:both; position:relative;font-size:13px;line-height:19px;}
+.whatis ul li{list-style:none; display:block; float:left; width:33%; background:#e9e9e9; position:relative; min-height:180px;padding:40px 0 20px 0;}
+.whatis ul li:nth-child(2){background:#f7f7f7;}
+.whatis ul li:nth-child(1):after {left: 100%; top: 58%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(233, 233, 233, 0); border-left-color: #e9e9e9; border-width: 15px; margin-top: -20px; z-index:1;}
+.whatis ul li:nth-child(2):after {left: 100%; top: 58%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(247, 247, 247, 0); border-left-color: #f7f7f7; border-width: 15px; margin-top: -20px; z-index:1;}
+.whatis .stepInner {left: 0; margin: 0 auto; position: absolute; right: 0; width: 82%;}
+.whatis .stepInner .colLeft{float:left;margin-top:20px; width:auto; font-size:50px; padding:0 5px; color:#d5d5d5; font-family: 'Open Sans', sans-serif;}
+.whatis .stepInner .colRight{float:left; width:auto; padding:12px 0 0 0;}
+.whatis .stepInner .colRight .innerTtl1{margin:0; font-size:24px; color:#808285; font-family: 'Montserrat', sans-serif;}
+.whatis .stepInner .colRight .innerTtl2{margin:0; font-size:29px; color:#676767; font-family: 'Montserrat', sans-serif; line-height:40px;}
+.whatis .stepInner .colRight .innerTtl3{margin:25px 0; text-align:center;}
+/******* term of use *******/
+.term_of_use{
+font-size:14px;
+}
+.term_of_use ol li{padding-bottom:5px;}
+/******* print media pop up home page *******/
+.news{font-size:12px;font-style:italic;}
+.news, .latest_descrip, .simplePopupClose{font-family: 'Open Sans', sans-serif;}
+.read_more{
+background: #E3461B;
+font-size: 11px;
+text-align: center;
+padding:2px 7px;
+color: #fff;
+position: relative;
+top: -13px;
+font-family: 'Open Sans', sans-serif;
+cursor:pointer;
+}
+.simplePopup.print_h{
+padding:20px;
+}
+.div-frame{
+    position:relative;
+     z-index:1;
+}

@@ -1,0 +1,106 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html {
+	background: #fff;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	line-height: 15px;
+	position: relative;
+	background: #fff;	
+}
+form .btn {
+	color: #000;
+	background: #fd8300;
+	border: 1px solid #fd8300;	
+	font-family: 'Roboto', sans-serif;	
+	height: 50px;
+	font-size: 18px;
+	font-weight: bold;
+	
+}
+form .btn:hover, form .btn:active, form .btn:focus {
+	color: #ffffff;
+	background: #cc2800;
+	border: 1px solid #cc6600;
+}
+.media {
+	padding: 20px 0 30px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.media-heading {
+	margin-bottom: 15px;
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+}
+.car-specfications {
+	margin-bottom: 18px;
+}
+
+.car-specfications li {
+	float: left;
+	color: #661400;
+	margin-right: 20px;
+	list-style-type: none;
+}
+.price {
+	margin: 15px 0;
+	color: #19bc9c;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+/*-----------------------search page-----------------*/
+.price {
+	text-align: right;
+	margin: 5px 0 !important;
+}
+#car-price-section .price {
+	text-align: left !important;
+}
+.select-location select {
+	-moz-appearance: none;
+	background: #fff;
+	border: medium none;
+	border-radius: 0px;
+	color: #888;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: normal;
+	height: 32px;
+	margin: 0 0 0 0;
+	outline: medium none;
+	padding-left: 10px;
+	text-align: left;
+	border: 1px #f1f1f1 solid;
+	width: 100% !important;
+	-webkit-appearance: none;
+}
+@media not all {
+	.select-location select {
+		padding-right: 18px;
+	}
+}
+.select-location label {
+	position: relative;
+	width: 210px;
+}
+.select-location label::after {
+	border-left: 1px solid #ddd;
+	color: #00aeef;
+	content: "\f078";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	padding: 0 8px 0 8px;
+	pointer-events: none;
+	position: absolute;
+	right: 2px;
+	text-decoration: inherit;
+	top: 8px;
+	background: #ffffff;
+}
