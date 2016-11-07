@@ -1,0 +1,636 @@
+<html>
+<link rel="stylesheet" href="editCSS1.css">	
+<div class="container1">
+	<header>
+		<div class="logoCon"><img src="./CarPics/logo.jpg"></div>
+		<div class="logoConAf">
+			<div class="row socialmedia">
+				<div class="UPassword f_l relative"></div>	
+				<div class="divider"></div>
+				<div class="social">
+					<ul>
+						<li><a href="https://www.facebook.com" title="Facebook" target="_blank" class="facebook"></a></li>
+						<li><a href="https://twitter.com" title="Twitter" target="_blank" class="twitter"></a></li>
+						<li><a href="https://instagram.com" title="Instagram" target="_blank" class="instagram"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row1 navigation1">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="cars.html">Cars</a></li>
+					<li><a href="contacts.html">Contact</a></li>
+					<li><a href="loginNew.html">Login</a></li>
+				</ul>
+			</div>		
+	</header>
+	</div>
+<div class="container1-fluid1 ltlPinkBg1">
+	<br>
+</div>
+<br><br><br><p></p>
+</div>
+
+</html>
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VolerCars - Search Result</title>
+	<link rel="stylesheet" href="./CarPics/bootstrap.min.css">
+	<link rel="stylesheet" href="./CarPics/style.css">
+	<link rel="stylesheet" href="./CarPics/font.css">
+	<script src="./CarPics/jquery.min.js.download"></script>
+	<script>
+		var jsonDataForAllCars = '{"Mahindra Scorpio":"Scorpio","Maruti Swift":"Swift","Tata Nano":"Nano","Ford Ecosport":"Ecosport","Ford Figo Aspire":"Figo Aspire","Honda City":"City","Volkswagen Ameo":"Ameo","Ford Figo":"Figo","Hyundai Grand i10":"Grand i10","Mahindra XUV":"XUV","Renault Duster":"Duster"}';
+		var obj = JSON.parse(jsonDataForAllCars);
+		function changesCarModel(city) {
+			var carModelsForCity = obj[city];
+			$('#carModels').empty();
+			var options = '<option value="all">All Cars</option>';
+			for ( var key in carModelsForCity) {
+				options += "<option value='"+carModelsForCity[key]+"'>" + key
+					+ "</option>";
+			}
+			$('#carModels').append(options);
+		}
+	</script>
+	<script type="text/javascript">
+    document.getElementById("popup").onclick = function () {
+        location.href = "www.google.com";
+    };
+	</script>
+	
+</head>
+
+<body onload="initialize();">
+	
+	<div class="container">
+		<div class="container">
+			<div id="car-list" class="carlist-div sr-type-content">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="white-box">
+							<div class="row">
+								<div class="col-lg-12">
+									<ul class="clearfix">
+										<li class="choose">Choose Category</li>
+										<li class="active"><a onclick="toggle(&#39;All&#39;);" class="transition" href=""> All Cars</a></li>
+										<li><a onclick="toggle(&#39;Hatchback&#39;);" class="transition" href=""> Hatchbacks</a></li>
+										<li><a onclick="toggle(&#39;Sedan&#39;);" class="transition" href=""> Sedans</a></li>
+										<li><a onclick="toggle(&#39;SUV&#39;);" class="transition" href=""> SUV</a></li>
+										<li><a onclick="toggle(&#39;Luxury&#39;);" class="transition" href=""> Luxury</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="bg-white-rounded col-space all-cars desktop-view">
+							<div class="bg-white-rounded col-space all-cars desktop-view">
+								
+								<div class="media" id="Hatchback" price="1225">									
+										<div class="media-left">
+											<img id="nanoImg" class="media-object" src="./CarPics/1466058491059.png" alt="cars" width="175px" height="100px">
+										</div>	
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Tata Nano</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">4 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Petrol</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 30/hr
+												</div>
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>
+								</div>
+								<div class="media" id="Hatchback" price="1225">									
+										<div class="media-left">
+											<img id="nanoImg" class="media-object" src="./CarPics/kwid.jpg" alt="cars" width="175px" height="100px">
+										</div>	
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Renault Kwid</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Petrol</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 55/hr
+												</div>
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>
+								</div>
+								
+								<div class="media" id="Hatchback" price="2205">
+									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/1474112106454.png" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Ford Figo</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 55/hr
+												</div>
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>
+
+								</div>
+								<div class="media" id="Hatchback" price="2205">
+									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/swift.png" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Maruti Swift</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 55/hr
+												</div>
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>											
+												</form>
+											</div>
+										</div>
+									
+								</div>
+								<div class="media" id="Hatchback" price="2205">
+									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/1472224699620.PNG" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Hyundai Grand i10</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 55/hr
+												</div>
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>	
+									
+								</div>
+								<div class="media" id="Sedan" price="2670">
+									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/1470916976714.png" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Ford Figo Aspire</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>	
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 80/hr
+												</div>	
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>									
+								</div>
+								<div class="media" id="Sedan" price="2670">									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/amaze.jfif" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Honda Amaze</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>	
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 80/hr
+												</div>	
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>									
+								</div>
+								<div class="media" id="Sedan" price="2670">									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/hcity.jfif" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Honda City</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Petrol</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>	
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 90/hr
+												</div>	
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>									
+								</div>
+								<div class="media" id="Sedan" price="2670">									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/xcent.png" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Hyundai Xcent</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Petrol</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>	
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 90/hr
+												</div>	
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>									
+								</div>
+								
+								<div class="media" id="Sedan" price="2670">									
+										<div class="media-left">
+											<img class="media-object" src="./CarPics/ameo.jfif" alt="cars" width="175px" height="100px">
+										</div>
+										<div class="media-body">
+											<div class="col-md-7">
+												<h1 class="media-heading">Volkswagen Ameo</h1>
+												<ul class="car-specfications clearfix">
+													<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+													<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+													<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+												</ul>	
+											</div>
+											<div class="col-md-5">
+												<div class="price">
+													<i class="fa fa-inr"></i>Rs 90/hr
+												</div>	
+												<div class="delivery-charges">
+													<i class="fa fa-clock-o"></i>
+												</div>
+												<form action="./DatePick/dateNew.php">
+												<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+												</form>
+											</div>
+										</div>									
+								</div>
+							<div class="media" id="SUV" price="3307">								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/1466517631156.PNG" alt="cars" width="175px" height="100px">
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Renault Duster</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+											</ul>	
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 90/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+							</div>
+							<div class="media" id="SUV" price="3307">
+								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/1470564831692.PNG" alt="cars" width="175px" height="100px">
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Mahindra Scorpio</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">7 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+											</ul>
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 90/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+							</div>
+								
+							<div class="media" id="SUV" price="3307">								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/1468570403350.jpg" alt="cars" width="175px" height="100px">
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Ford Ecosport</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+											</ul>
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 90/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"   class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+								
+							</div>
+							<div class="media" id="SUV" price="3307">								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/fortuner.jfif" alt="cars" width="175px" height="100px">
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Toyota Fortuner</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">7 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+											</ul>	
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 130/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+							</div>						
+							<div class="media" id="SUV" price="4287">								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/1467210370127.PNG" alt="cars" width="175px" height="100px">										
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Mahindra XUV</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">7 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/manual.svg" alt="false">Manual</li>
+											</ul>
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 130/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+							</div>	
+							<div class="media" id="Luxury" price="4287">								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/1467210370127.PNG" alt="cars" width="175px" height="100px">										
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Mercedes GLA</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/automatic.svg" alt="false">Automatic</li>
+											</ul>
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 240/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+							</div>
+							<div class="media" id="Luxury" price="4287">								
+									<div class="media-left">
+										<img class="media-object" src="./CarPics/q3.jfif" alt="cars" width="175px" height="100px">										
+									</div>
+									<div class="media-body">
+										<div class="col-md-7">
+											<h1 class="media-heading">Audi Q3</h1>
+											<ul class="car-specfications clearfix">
+												<li><img src="./CarPics/seat-icon.png">5 Seater</li>
+												<li><img src="./CarPics/petrol-icon.png">Diesel</li>
+												<li><img class="svg manual-icon" src="./CarPics/automatic.svg" alt="false">Automatic</li>
+											</ul>
+										</div>
+										<div class="col-md-5">
+											<div class="price">
+												<i class="fa fa-inr"></i>Rs 240/hr
+											</div>
+											<div class="delivery-charges">
+												<i class="fa fa-clock-o"></i>
+											</div>
+											<form action="./DatePick/dateNew.php">
+											<button id="popup"  class="btn btn-blue-glass btn-block text-uppercase">Book Car</button>
+											</form>
+										</div>
+									</div>
+							</div>
+							
+						</div>			
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+</div>
+<script type="text/javascript">		
+	var toggleVal = 'All';
+	function toggle(target) {
+		if (target == 'Sedan') {
+			$("div[id^='SUV']").hide("slow");
+			$("div[id^='Hatchback']").hide("slow");
+			$("div[id^='Luxury']").hide("slow");
+			$("div[id^='Sedan']").show("slow");
+			toggleVal = target;
+			applyFilter(target);
+		}
+		if (target == 'SUV') {
+			$("div[id^='SUV']").show("slow");
+			$("div[id^='Hatchback']").hide("slow");
+			$("div[id^='Luxury']").hide("slow");
+			$("div[id^='Sedan']").hide("slow");
+			toggleVal = target;
+			applyFilter(target);
+		}
+		if (target == 'Hatchback') {
+			$("div[id^='SUV']").hide("slow");
+			$("div[id^='Hatchback']").show("slow");
+			$("div[id^='Luxury']").hide("slow");
+			$("div[id^='Sedan']").hide("slow");
+			toggleVal = target;
+			applyFilter(target);
+		}
+		if (target == 'Luxury') {
+			$("div[id^='SUV']").hide("slow");
+			$("div[id^='Hatchback']").hide("slow");
+			$("div[id^='Luxury']").show("slow");
+			$("div[id^='Sedan']").hide("slow");
+			toggleVal = target;
+			applyFilter(target);
+		}
+		if (target == 'All') {
+			$("div[id^='SUV']").show("slow");
+			$("div[id^='Hatchback']").show("slow");
+			$("div[id^='Luxury']").show("slow");
+			$("div[id^='Sedan']").show("slow");
+			toggleVal = target;
+			applyFilter();
+		}
+		return false;
+	}
+	$(document).ready(function() {
+	$('.clearfix li a').click(function(e) {
+	$('.clearfix li').removeClass('active');
+	var $parent = $(this).parent();
+	if (!$parent.hasClass('active')) {
+		$parent.addClass('active');
+	}
+	e.preventDefault();
+});
+});
+</script>
+
+</html>
+
+<html>
+
+<div class="container1-fluid1 purpleDrkBg1">
+<br>
+</div>
+
+<div class="container footer">
+	<div class="w_50 f_l">
+		<ul>
+			<li><a href="">Terms of Use</a></li>
+			<li><a href="">Privacy Policy</a></li>
+			<li><a href="siteMap.html">Site Map</a></li>
+		</ul>
+	</div>
+	<div class="w_50 f_l right">
+		<ul>
+			<li><a href="contacts.html">Contact Us</a></li>
+			<li><a href="">FAQs</a></li>
+		</ul>
+	</div>
+	<p class="copyright">Copyright © 2016 Vroom India Pvt Ltd All Rights Reserved.</p>
+</div>
+</html>
